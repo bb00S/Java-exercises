@@ -11,26 +11,29 @@ import java.util.Scanner;
 import java.util.Random;
 public class proba {
 public static void main(String[] args) {
-Scanner unos=new Scanner(System.in);
-Random rn = new Random();
-double BROJ_SIM = 10000;
-int ulog = unos.nextInt();
-int opklada = unos.nextInt();
-int cilj = unos.nextInt();
-double broj_pobjeda = 0;
-for (int s=0;s<BROJ_SIM;s++) {
-double novac = ulog;
-while (novac > 0 && novac < cilj) {
-int a=(rn.nextInt(100)); 
-u rasponu od 0 do 99;
-if (a < 49){
-novac += opklada;}
-else {
-novac -= opklada;}
-}
-if (novac >= cilj) {
-broj_pobjeda += 1;}
-}
-System.out.println(broj_pobjeda/BROJ_SIM);
+  Scanner unos=new Scanner(System.in);
+  Random rn = new Random();
+  double BROJ_SIM = 10000;
+  int ulog = unos.nextInt();
+  int opklada = unos.nextInt();
+  int cilj = unos.nextInt();
+  double broj_pobjeda = 0;
+  for (int s=0;s<BROJ_SIM;s++) {
+    double novac = ulog;
+    while (novac > 0 && novac < cilj) {
+      int a=(rn.nextInt(100)); 
+      u rasponu od 0 do 99;
+      if (a < 49){
+        novac += opklada;
+      }
+      else {
+        novac -= opklada;
+      }
+    }
+    if (novac >= cilj){
+    broj_pobjeda += 1;
+    }
+  }
+  System.out.println(broj_pobjeda/BROJ_SIM);
 }
 }
