@@ -8,29 +8,29 @@ The program prints the message "Found" if the second number is in the first or "
 import java.util.Scanner;
 public class proba {
 public static void main(String[] args) {
-Scanner unos=new Scanner(System.in);
-int a = unos.nextInt();
-int b = unos.nextInt();
-int temp = b; 
-int desetine = 1;
-while (temp != 0) { 
-while petlja ce raditi*/
-desetine *= 10;
-temp /=10;
-}
-boolean seNalazi = false;
-while (a != 0) {
-temp = a % desetine;
-if (temp == b) {
-seNalazi = true;
-break;}
-a /= 10;
-}
-if (seNalazi==true) {
-System.out.println("Nalazi se");
-}
-else {
-System.out.println("Ne nalazi se");
-}
+  Scanner unos=new Scanner(System.in);
+  int a = unos.nextInt();
+  int b = unos.nextInt();
+  int temp = b; 
+  int desetine = 1;
+  while (temp != 0) { 
+    desetine *= 10;
+    temp /=10;
+  }
+  boolean seNalazi = false;
+  while (a != 0) {
+    temp = a % desetine;
+    if (temp == b) {
+      seNalazi = true;
+      break;
+    }
+    a /= 10;
+  }
+  if (seNalazi==true) {
+    System.out.println("Nalazi se");
+  }
+  else {
+    System.out.println("Ne nalazi se");
+  }
 }
 }
