@@ -9,17 +9,17 @@ then passing it to the function, which after the calculation prints the result.*
 import java.util.Scanner;
 public class proba {
 public static void main(String[] args) {
-Scanner unos=new Scanner(System.in);
-long n = unos.nextLong(); 
-long result=0;
-while (n > 9) {
-result = 0;
-while (n > 0) {
-result += n % 10;
-n/=10;
-}
-n = result;
-}
-System.out.println(result);
+  Scanner unos=new Scanner(System.in);
+  long n = unos.nextLong(); 
+  long result=0;
+  while (n > 9) {
+    result = 0;
+    while (n > 0) {
+      result += n % 10;
+      n/=10;
+    }
+    n = result;
+  }
+  System.out.println(result);
 }
 }
