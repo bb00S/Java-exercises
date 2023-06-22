@@ -5,22 +5,23 @@ The program prints the difference of the sum of Nikola's numbers and the sum of 
 import java.util.Scanner;
 public class proba {
 public static void main(String[] args) {
-Scanner unos=new Scanner(System.in);
-float a;
-a=unos.nextFloat();
-float stefan=0;
-float nikola=0;
-float brojac=0;
-while(a!=0){ {
-if (brojac%2==0){ 
-nikola+=a;
-}
-else{
-stefan+=a;
-}
-brojac+=1;
-a=unos.nextFloat();
-}
-System.out.println(nikola-stefan); 
+  Scanner unos=new Scanner(System.in);
+  float a;
+  a=unos.nextFloat();
+  float stefan=0;
+  float nikola=0;
+  float brojac=0;
+  while(a!=0){ {
+    if (brojac%2==0){ 
+      nikola+=a;
+    }
+    else{
+      stefan+=a;
+    }
+    brojac+=1;
+    a=unos.nextFloat();
+    }
+    System.out.println(nikola-stefan); 
+  }
 }
 }
