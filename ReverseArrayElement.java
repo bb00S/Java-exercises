@@ -8,42 +8,42 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class proba {
 public static int reverseNum (int obrnut[]) {
-int n;
-int reverseC=0;
-reverseC=Math.abs(reverseC);
-while (obrnut[obrnut.length-1]>0) {
-n = obrnut[obrnut.length-1] % 10;
-reverseC = (reverseC*10)+n;
-obrnut[obrnut.length-1] = obrnut[obrnut.length-1]/10; 
+  int n;
+  int reverseC=0;
+  reverseC=Math.abs(reverseC);
+  while (obrnut[obrnut.length-1]>0) {
+  n = obrnut[obrnut.length-1] % 10;
+  reverseC = (reverseC*10)+n;
+  obrnut[obrnut.length-1] = obrnut[obrnut.length-1]/10; 
 }
 return reverseC;
 }
 public static void main(String[] args) {
-Scanner unos=new Scanner(System.in);
-System.out.println("Unesite duzinu niza.");
-int n = unos.nextInt(); 
-int[] array = new int [n];
-System.out.println("Unesite elemente u niz.");
-for (int i=0;i<n;i++) {
-array [i]=unos.nextInt();
-}
-int [] obrnut = new int [n];
-for (int i=0;i<n;i++) {
-obrnut[i]=array[i];
-}
-obrnut[n-1]=reverseNum(obrnut); 
-boolean imaISTA = false;
-for (int i=0;i<array.length;i++) {
-if (obrnut[array.length-1]==array[i]) {
-imaISTA = true;
-break;
-}
-}
-if (imaISTA==true) {
-System.out.println("DA");
-}
-else {
-System.out.println("NE");
-}
+  Scanner unos=new Scanner(System.in);
+  System.out.println("Unesite duzinu niza.");
+  int n = unos.nextInt(); 
+  int[] array = new int [n];
+  System.out.println("Unesite elemente u niz.");
+  for (int i=0;i<n;i++) {
+    array [i]=unos.nextInt();
+  }
+  int [] obrnut = new int [n];
+  for (int i=0;i<n;i++) {
+    obrnut[i]=array[i];
+  }
+  obrnut[n-1]=reverseNum(obrnut); 
+  boolean imaISTA = false;
+  for (int i=0;i<array.length;i++) {
+    if (obrnut[array.length-1]==array[i]) {
+      imaISTA = true;
+    break;
+    }
+  }
+  if (imaISTA==true) {
+    System.out.println("DA");
+  }
+  else {
+    System.out.println("NE");
+   }
 }
 }
