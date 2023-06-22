@@ -8,46 +8,52 @@ the program prints "yes", otherwise it prints "no".*/
 import java.util.Scanner;
 public class proba {
 public static void main (String[] args) {
-Scanner unos=new Scanner(System.in);
-int m = unos.nextInt(); 
-int n = unos.nextInt(); 
-int [] nikola = new int [m];
-int [] petar = new int [n];
-int sumaNikolinih = 0;
-int sumaPetrovih = 0;
-//unos elemenata u niz Nikolinih brojeva
-for (int i=0;i<m;i++) {
-nikola [i]=unos.nextInt();
-sumaNikolinih += nikola[i];
-}
-//unos elemenata u niz Petrovih brojeva
-for (int i=0;i<n;i++) {
-petar [i]=unos.nextInt();
-sumaPetrovih += petar[i];
-}
-System.out.print("Brojevi koje je dobio Nikola ");
-for(int i=0; i< n; i++) {
-System.out.print(nikola[i] +" ");
-}
-System.out.println("");
-System.out.print("Brojevi koje je dobio Petar ");
-for(int i=0; i< n; i++) {
-System.out.print(petar[i] +" ");
-}
-System.out.println("");
-int brojKojiPetarTrebaIzbaciti = sumaPetrovih - sumaNikolinih;
-boolean found = false;
-for(int i=0;i<petar.length;i++){
-if(petar[i] == brojKojiPetarTrebaIzbaciti){
-found = true;
-break;
-}
-}
-if (found==true) {
-System.out.println("jeste");
-}
-else {
-System.out.println("nije");
-}
+  Scanner unos=new Scanner(System.in);
+  int m = unos.nextInt(); 
+  int n = unos.nextInt(); 
+  int [] nikola = new int [m];
+  int [] petar = new int [n];
+  int sumaNikolinih = 0;
+  int sumaPetrovih = 0;
+  
+  for (int i=0;i<m;i++) {
+    nikola [i]=unos.nextInt();
+    sumaNikolinih += nikola[i];
+  }
+  
+  for (int i=0;i<n;i++) {
+    petar [i]=unos.nextInt();
+    sumaPetrovih += petar[i];
+  }
+  
+  System.out.print("Brojevi koje je dobio Nikola ");
+  
+  for(int i=0; i< n; i++) {
+    System.out.print(nikola[i] +" ");
+  }
+  
+  System.out.println("");
+  System.out.print("Brojevi koje je dobio Petar ");
+  
+  for(int i=0; i< n; i++) {
+    System.out.print(petar[i] +" ");
+  }
+  
+  System.out.println("");
+  int brojKojiPetarTrebaIzbaciti = sumaPetrovih - sumaNikolinih;
+  boolean found = false;
+  
+  for(int i=0;i<petar.length;i++){
+    if(petar[i] == brojKojiPetarTrebaIzbaciti){
+    found = true;
+  break;
+  }
+  }
+  if (found==true) {
+    System.out.println("jeste");
+  }
+  else {
+    System.out.println("nije");
+  }
 }
 }
